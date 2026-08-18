@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Corp — Your Expert Network. Your Perfect Event.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
+      <circle class="dot" cx="20" cy="5" r="2.2" fill="#D4A843"/>
+      <path d="M20 9v23" stroke="#D4A843" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M20 32C10 28 6 18 9 8c6 6 10 14 11 24z" stroke="#D4A843" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M20 32C30 28 34 18 31 8c-6 6-10 14-11 24z" stroke="#D4A843" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M20 32c-6-5-8-13-6-21 4 5 6 13 6 21z" stroke="#D4A843" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M20 32c6-5 8-13 6-21-4 5-6 13-6 21z" stroke="#D4A843" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <span class="nav-logo-text">Event Corp</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#problema" data-es="El Problema" data-en="The Problem">The Problem</a>
+    <a href="#features" data-es="Features" data-en="Features">Features</a>
+    <a href="#como-funciona" data-es="How it works?" data-en="How it works?">How it works?</a>
+    <a href="#nosotros" data-es="Nosotros" data-en="About Us">About Us</a>
+    <a href="#precios" data-es="Precios" data-en="Pricing">Pricing</a>
+  </nav>
+  <div class="nav-cta">
+    <div class="lang-toggle" id="langToggle">
+      <button class="lang-btn" id="btnES" onclick="setLang('es')">ES</button>
+      <button class="lang-btn active" id="btnEN" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="btn-nav-ghost" onclick="location.href='index.html'" data-es="Iniciar sesión" data-en="Log in">Log in</button>
+    <button class="btn-nav-solid" onclick="location.href='index.html'" data-es="Comenzar gratis" data-en="Get started free">Get started free</button>
+  </div>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-drawer" id="mobileMenu">
+  <a href="#problema" onclick="toggleMenu()">The Problem</a>
+  <a href="#features" onclick="toggleMenu()">Features</a>
+  <a href="#como-funciona" onclick="toggleMenu()">How it works?</a>
+  <a href="#nosotros" onclick="toggleMenu()">About Us</a>
+  <a href="#precios" onclick="toggleMenu()">Pricing</a>
+  <a href="index.html" class="btn-full">Get started free</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span class="hero-dot"></span>
+    <span data-es="Live platform in Panama" data-en="Live platform in Panama">Live platform in Panama</span>
+  </div>
+  <h1 data-es="Your Expert Network,<br><em>Your Perfect Event.</em>" data-en="Your Expert Network,<br><em>Your Perfect Event.</em>">Your Expert Network,<br><em>Your Perfect Event.</em></h1>
+  <p class="hero-sub"><span data-es="From event planning chaos to full control — verified vendors, real-time budget, and digital contracts all in one place." data-en="From event planning chaos to full control — verified vendors, real-time budget, and digital contracts all in one place.">From event planning chaos to full control — verified vendors, real-time budget, and digital contracts all in one place.</span></p>
+  <div class="hero-buttons">
+    <button class="btn-primary" onclick="location.href='index.html'">
+      <span data-es="Start planning free →" data-en="Start planning free →">Start planning free →</span>
+    </button>
+    <button class="btn-secondary" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+      <span data-es="See how it works" data-en="See how it works">See how it works</span>
+    </button>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <span class="hero-stat-num">60%</span>
+      <span class="hero-stat-label"><span data-es="of clients can't find<br>reliable vendors" data-en="of clients can't find<br>reliable vendors">of clients can't find<br>reliable vendors</span></span>
+    </div>
+    <div class="hero-stat-divider"></div>
+    <div>
+      <span class="hero-stat-num">45%</span>
+      <span class="hero-stat-label"><span data-es="can't evaluate<br>vendor quality" data-en="can't evaluate<br>vendor quality">can't evaluate<br>vendor quality</span></span>
+    </div>
+    <div class="hero-stat-divider"></div>
+    <div>
+      <span class="hero-stat-num">1</span>
+      <span class="hero-stat-label"><span data-es="platform for everything —<br>from idea to contract" data-en="platform for everything —<br>from idea to contract">platform for everything —<br>from idea to contract</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEMA ===== -->
+<section class="s-problema" id="problema">
+  <div class="s-inner">
+    <div class="section-head center">
+      <span class="s-eyebrow">The Problem</span>
+      <h2 class="s-title center">Planning an event is chaotic.<br>Until now.</h2>
+    </div>
+    <div class="prob-grid">
+      <div class="prob-card">
+        <div class="prob-icon">🔍</div>
+        <h3>Unfiltered Vendors</h3>
+        <p>60% of organizers cannot find reliable vendors. Generic directories do not verify quality or real availability.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">📊</div>
+        <h3>Unknown Final Cost</h3>
+        <p>Budgets that start at one number and end at another. Last-minute surprises ruin the experience and your wallet.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">⚖️</div>
+        <h3>No Legal Backing</h3>
+        <p>Verbal agreements with no documentation. When something goes wrong, there is no contract to protect the client or vendor.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon">💡</div>
+        <h3>Limited Creativity</h3>
+        <p>Generic ideas dominate the market. 45% cannot tell if a proposal is truly good or just what everyone offers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="s-features" id="features">
+  <div style="max-width:1160px;margin:0 auto">
+    <div class="section-head center" style="margin-bottom:72px;">
+      <span class="s-eyebrow">The 3 key features</span>
+      <h2 class="s-title white center">One platform.<br>Three superpowers.</h2>
+    </div>
+
+    <!-- LIVE GOLD -->
+    <div class="feature-block">
+      <div class="feat-text">
+        <span class="feat-badge gold">💰 Live Gold</span>
+        <h3>Smart budget<br>in real time</h3>
+        <p>Every service you add updates your balance instantly. No spreadsheets, no calculators, no surprises. Watch your total event cost update as you make decisions.</p>
+        <ul class="feat-list">
+          <li>Instant update with every selection</li>
+          <li>Visual alerts as you approach your limit</li>
+          <li>Breakdown by service category</li>
+          <li>Full financial control before hiring</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="lg-card">
+          <div class="lg-header">
+            <span>My Event — Wedding</span>
+            <span class="lg-live">Live</span>
+          </div>
+          <div class="lg-amount">$24,500</div>
+          <div class="lg-sub">of $30,000 budgeted</div>
+          <div class="lg-track"><div class="lg-fill" id="lgFill" style="width:81.6%"></div></div>
+          <div class="lg-row"><span>🎵 Music & Sound</span><strong>$3,200</strong></div>
+          <div class="lg-row"><span>🍽 Catering</span><strong>$8,400</strong></div>
+          <div class="lg-row"><span>📷 Photography</span><strong>$2,800</strong></div>
+          <div class="lg-row"><span>🌸 Flowers</span><strong>$1,900</strong></div>
+          <div class="lg-row"><span>💡 Lighting</span><strong>$4,200</strong></div>
+          <div class="lg-add" onclick="animateLG()"><span>+ Add service</span><span>→</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VAULT -->
+    <div class="feature-block flip">
+      <div class="feat-text">
+        <span class="feat-badge blue">🔒 The Vault</span>
+        <h3>Digital contracts.<br>No hassle.</h3>
+        <p>Generate formal agreements between client and vendor in seconds. No lawyers, no paperwork. The Vault documents every term and protects both parties against any unexpected event.</p>
+        <ul class="feat-list">
+          <li>Contracts auto-generated with AI</li>
+          <li>Cancellation and surcharge clauses included</li>
+          <li>Digital signature built into the platform</li>
+          <li>Legal backing for both client and vendor</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="vault-card">
+          <div class="vault-top">
+            <div class="vault-icon-wrap">🔒</div>
+            <div class="vault-top-text">
+              <h4>Service Contract</h4>
+              <span>Catering Elite · María & José Wedding</span>
+            </div>
+          </div>
+          <div class="vault-clause">Service on February 14th, 7:00 PM</div>
+          <div class="vault-clause">150 confirmed guests</div>
+          <div class="vault-clause">Cancellation with 48h notice</div>
+          <div class="vault-clause">15% surcharge for evening service</div>
+          <div class="vault-clause">30% deposit upon signing</div>
+          <div class="vault-signed">
+            <span>✓ Signed by both parties</span>
+            <span class="vault-date">Today, 11:42 AM</span>
+          </div>
+          <button class="vault-dl" onclick="this.textContent='✓ Descargado!'">Download PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- WIZARD AI -->
+    <div class="feature-block">
+      <div class="feat-text">
+        <span class="feat-badge purple">🪄 Wizard AI</span>
+        <h3>Your creative assistant<br>with Gemini.</h3>
+        <p>Describe your event and Wizard AI returns personalized ideas, color palettes, thematic concepts, and concrete recommendations. Transforms vague inspiration into real proposals.</p>
+        <ul class="feat-list">
+          <li>Personalized ideas based on your style</li>
+          <li>Contract generation with custom clauses</li>
+          <li>Estimated budgets by event type</li>
+          <li>Powered by Google Gemini</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="wizard-card">
+          <div class="wizard-card-header">
+            <svg width="22" height="22" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="5" r="2.2" fill="#D4A843"/>
+              <path d="M20 9v23M20 32C10 28 6 18 9 8c6 6 10 14 11 24zM20 32C30 28 34 18 31 8c-6 6-10 14-11 24z" stroke="#D4A843" stroke-width="1.7" stroke-linejoin="round"/>
+            </svg>
+            Wizard AI
+          </div>
+          <div class="wz-msgs" id="wizMsgs">
+            <div class="wz-user">I want a wedding with a night garden, tropical flowers, and something very elegant.</div>
+            <div class="wz-ai">✨ <strong>Garden Opulence Nocturno</strong> — warm whites with golden accents. Suspended "rain of lights" lighting, heliconia and white orchid centerpieces. String quartet at ceremony + DJ lounge after 10PM.</div>
+          </div>
+          <div class="wz-input-row">
+            <input type="text" id="wizInput" placeholder="Describe your event..." onkeydown="sendWiz(event)">
+            <button class="wz-send" onclick="sendWiz({key:'Enter'})">➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CÓMO FUNCIONA ===== -->
+<section class="s-how" id="como-funciona">
+  <div class="s-inner">
+    <div class="section-head center">
+      <span class="s-eyebrow">How it works?</span>
+      <h2 class="s-title center">From idea to event,<br>in 5 steps.</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-step" style="opacity:0;transform:translateY(20px);transition:all .5s .0s">
+        <div class="how-num">01</div>
+        <h4>Create your free account</h4>
+        <p>Sign up as a user in seconds. No credit card required.</p>
+      </div>
+      <div class="how-step" style="opacity:0;transform:translateY(20px);transition:all .5s .1s">
+        <div class="how-num">02</div>
+        <h4>Define your event with Wizard AI</h4>
+        <p>Describe what you want. Get ideas, themes, and vision instantly.</p>
+      </div>
+      <div class="how-step" style="opacity:0;transform:translateY(20px);transition:all .5s .2s">
+        <div class="how-num">03</div>
+        <h4>Explore verified vendors</h4>
+        <p>Filter by category, location, and real availability.</p>
+      </div>
+      <div class="how-step" style="opacity:0;transform:translateY(20px);transition:all .5s .3s">
+        <div class="how-num">04</div>
+        <h4>Build your budget with Live Gold</h4>
+        <p>Watch the total cost update live as you choose services.</p>
+      </div>
+      <div class="how-step" style="opacity:0;transform:translateY(20px);transition:all .5s .4s">
+        <div class="how-num">05</div>
+        <h4>Hire and sign with The Vault</h4>
+        <p>Generate the contract, review clauses, sign digitally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROLES ===== -->
+<section class="s-roles">
+  <div class="s-inner">
+    <div class="section-head center">
+      <span class="s-eyebrow">Who is it for</span>
+      <h2 class="s-title white center">Two profiles.<br>One platform.</h2>
+    </div>
+    <div class="roles-grid">
+      <div class="role-card-info">
+        <div class="role-top">
+          <span class="role-emoji">👤</span>
+          <div>
+            <h3>User / Client</h3>
+            <span class="role-precio gratis">Completely free</span>
+          </div>
+        </div>
+        <p>Organize your event from start to finish. Access all features without paying a single cent.</p>
+        <ul class="role-features">
+          <li>Unlimited Wizard AI</li>
+          <li>Live Gold — real-time budget</li>
+          <li>The Vault — digital contracts</li>
+          <li>Direct messages with vendors</li>
+          <li>Favorites and moodboards</li>
+        </ul>
+        <button class="btn-role-primary" onclick="location.href='index.html'">Create free account</button>
+      </div>
+      <div class="role-card-info premium">
+        <div class="role-top">
+          <span class="role-emoji">🏢</span>
+          <div>
+            <h3>Proveedor</h3>
+            <span class="role-precio pago">From $49/month</span>
+          </div>
+        </div>
+        <p>Digitize your business and connect with clients who already have a budget and real intent to hire.</p>
+        <ul class="role-features">
+          <li>Verified profile with portfolio</li>
+          <li>Premium visibility in searches</li>
+          <li>Qualified leads directly</li>
+          <li>The Vault — contracts with clients</li>
+          <li>"Verified" badge on your profile</li>
+        </ul>
+        <button class="btn-role-outline" onclick="location.href='index.html'">Register my business</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRECIOS ===== -->
+<section class="s-precios" id="precios">
+  <div class="s-inner">
+    <div class="section-head center">
+      <span class="s-eyebrow">Business model</span>
+      <h2 class="s-title center">Free for planners.<br>Premium for vendors.</h2>
+    </div>
+    <p class="s-sub">The more free users on the platform, the more valuable it is for vendors to appear on it.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tag">User</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-period">Forever</div>
+        <div class="pricing-desc">Full access to all planning features.</div>
+        <button class="btn-pricing" onclick="location.href='index.html'">Start now</button>
+      </div>
+      <div class="pricing-card featured">
+        <span class="pricing-badge">MOST POPULAR</span>
+        <div class="pricing-tag">Vendor Starter</div>
+        <div class="pricing-price">$49</div>
+        <div class="pricing-period">per month</div>
+        <div class="pricing-desc">Verified profile, search visibility, and access to qualified leads.</div>
+        <button class="btn-pricing" onclick="location.href='index.html'">14 days free</button>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tag">Vendor Pro</div>
+        <div class="pricing-price">$99</div>
+        <div class="pricing-period">per month</div>
+        <div class="pricing-desc">Priority positioning, advanced analytics, and premium badge.</div>
+        <button class="btn-pricing outline" onclick="location.href='index.html'">See details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIOS ===== -->
+<section class="s-testi">
+  <div class="s-inner">
+    <div class="section-head center">
+      <span class="s-eyebrow">What they say</span>
+      <h2 class="s-title white center">Real events.<br>Real people.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card-info">
+        <div class="testi-stars">★★★★★</div>
+        <p>"From the decorations to customer service, everything was incredible. The professionalism and dedication of the team really shows."</p>
+        <div class="testi-author-row">
+          <div class="testi-avatar-circle">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80" alt="Laura">
+          </div>
+          <div>
+            <strong>Laura Trujillo</strong>
+            <span>Wedding · Panama City</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card-info">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Wizard AI saved us hours of planning. It generated the full concept and contract in minutes. Incredible."</p>
+        <div class="testi-author-row">
+          <div class="testi-avatar-circle">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Marco">
+          </div>
+          <div>
+            <strong>Marco Espino</strong>
+            <span>Corporate event · Panama</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card-info">
+        <div class="testi-stars">★★★★★</div>
+        <p>"As a vendor, Event Corp tripled my inquiries in the first month. Clients arrive with a defined budget."</p>
+        <div class="testi-author-row">
+          <div class="testi-avatar-circle">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="Carlos">
+          </div>
+          <div>
+            <strong>Carlos Montoya</strong>
+            <span>Catering Elite · Vendor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOSOTROS ===== -->
+<section class="s-nosotros" id="nosotros">
+  <div class="nosotros-grid">
+    <div class="nos-left">
+      <h2>Your event, our <strong>priority</strong></h2>
+      <p>At Event Corp, we are dedicated to making your dreams a reality, creating unforgettable experiences for every occasion. From enchanting weddings to exclusive corporate events, we are here for you every step of the way.</p>
+      <span class="nos-label">We specialize in:</span>
+      <div class="nos-specs">
+        <span class="nos-spec">⏰ Unforgettable weddings</span>
+        <span class="nos-spec">📧 Corporate events</span>
+        <span class="nos-spec">🎉 Memorable parties</span>
+        <span class="nos-spec">🎂 Other events</span>
+      </div>
+      <div class="nos-stats-row">
+        <div class="nos-stat">
+          <strong>1,500+</strong>
+          <span>Events Organized</span>
+        </div>
+        <div class="nos-stat">
+          <strong>200+</strong>
+          <span>Verified Vendors</span>
+        </div>
+      </div>
+      <button class="btn-nos" onclick="document.getElementById('precios').scrollIntoView({behavior:'smooth'})">Request a Quote</button>
+    </div>
+    <div class="nos-cards">
+      <div class="nos-card">
+        <h4>Since 2010</h4>
+        <div class="nos-big-num-row">
+          <span class="nos-big-num">1,500+</span>
+          <span class="nos-big-label">Events Organized</span>
+          <span class="nos-big-icon">🏆</span>
+        </div>
+        <div class="nos-big-num-row">
+          <span class="nos-big-num">200+</span>
+          <span class="nos-big-label">Verified Vendors</span>
+          <span class="nos-big-icon">🛡</span>
+        </div>
+      </div>
+      <div class="nos-card">
+        <h4>Our Team</h4>
+        <div class="nos-team">
+          <div class="nos-team-item">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Mariana">
+            <span>Mariana</span>
+          </div>
+          <div class="nos-team-item">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Andrés">
+            <span>Andrés</span>
+          </div>
+          <div class="nos-team-item">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80" alt="Sofía">
+            <span>Sofía</span>
+          </div>
+          <div class="nos-team-item">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" alt="Daniel">
+            <span>Daniel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="s-cta">
+  <div class="cta-glow"></div>
+  <h2>Your perfect event<br>starts here.</h2>
+  <p>Join the first platform in Panama that integrates real-time budgeting, digital contracts, and artificial intelligence all in one place.</p>
+  <div class="cta-buttons">
+    <button class="btn-primary" onclick="location.href='index.html'">Create my free account →</button>
+    <button class="btn-secondary" onclick="location.href='index.html'">I'm a vendor</button>
+  </div>
+  <p class="cta-note">No credit card · No commitments · Ready in 2 minutes</p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-main">
+    <div>
+      <div class="nav-logo" style="margin-bottom:14px;">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="5" r="2.2" fill="#D4A843"/>
+          <path d="M20 9v23M20 32C10 28 6 18 9 8c6 6 10 14 11 24zM20 32C30 28 34 18 31 8c-6 6-10 14-11 24z" stroke="#D4A843" stroke-width="1.7" stroke-linejoin="round"/>
+        </svg>
+        <span class="nav-logo-text">Event Corp</span>
+      </div>
+      <p class="footer-brand-desc">Your expert network, your perfect event. We connect users and vendors to create unforgettable celebrations.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+        <a href="#" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#problema">The Problem</a>
+      <a href="#features">Features</a>
+      <a href="#como-funciona">How it works?</a>
+      <a href="#precios">Pricing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>hola@eventcorp.com</p>
+      <p>+507 6000-0000</p>
+      <p>Ciudad de Panamá</p>
+    </div>
+  </div>
+  <hr class="footer-hr">
+  <p class="footer-bottom">© 2026 Event Corp. All rights reserved.</p>
+</footer>
+
+<!-- ===== SCRIPT ===== -->
+<!-- ===== QR FAB ===== -->
+<button class="qr-fab" onclick="openQR()" title="Código QR de acceso">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+    <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+    <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+    <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+    <rect x="5" y="5" width="3" height="3" fill="currentColor"/>
+    <rect x="16" y="5" width="3" height="3" fill="currentColor"/>
+    <rect x="5" y="16" width="3" height="3" fill="currentColor"/>
+    <path d="M14 14h3v3h-3zM17 17h3v3h-3zM14 20h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<!-- ===== QR MODAL ===== -->
+<div class="qr-overlay" id="qrOverlay" onclick="closeQROutside(event)">
+  <div class="qr-modal" id="qrModal">
+    <button class="qr-close" onclick="closeQR()">✕</button>
+    <div class="qr-logo">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="5" r="2.2" fill="#D4A843"/>
+        <path d="M20 9v23M20 32C10 28 6 18 9 8c6 6 10 14 11 24zM20 32C30 28 34 18 31 8c-6 6-10 14-11 24z" stroke="#D4A843" stroke-width="1.7" stroke-linejoin="round"/>
+      </svg>
+      <span>Event Corp</span>
+    </div>
+    <div class="qr-box">
+      <canvas id="qrCanvas"></canvas>
+    </div>
+    <h3 class="qr-title" data-es="Scan to access" data-en="Scan to access">Scan to access</h3>
+    <p class="qr-sub" data-es="Open your phone camera and point it at the QR code to open Event Corp directly." data-en="Open your phone camera and point it at the QR code to open Event Corp directly.">Open your phone camera and point it at the QR code to open Event Corp directly.</p>
+    <div class="qr-url" id="qrUrl">eventcorp.com</div>
+    <button class="qr-dl" onclick="downloadQR()" data-es="Download QR" data-en="Download QR">Download QR</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
